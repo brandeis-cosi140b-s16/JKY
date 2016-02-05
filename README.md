@@ -1,4 +1,5 @@
 # JKY
+*(Just Kidding, Yo)
 ### Yelp Annotation Team:
 Justin Su (justinsu at brandeis dot edu) <br/>
 Kelley Lynch (kmlynch at brandeis dot edu) <br/>
