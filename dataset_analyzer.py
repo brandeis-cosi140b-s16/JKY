@@ -6,6 +6,9 @@ from collections import defaultdict, Counter
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+from nltk.corpus import stopwords
+from nltk.corpus import wordnet as wn
+import re
 
 
 def business_data_getter(bus_data_path, category='Restaurants'):
@@ -105,12 +108,45 @@ def output_review(bus_data_path, review_data_path, output_path, category='Restau
         data = json.loads(json.loads(dump))
         bus_id = data['business_id']
         # stopwords_list = stopwords.words('english')
-        if bus_id in bus_dict and subcate in bus_dict[bus_id]['categories']:
+        if bus_id in bus_dict and subcate in bus_dict[bus_id]['categories'] and bus_dict[bus_id]['review_count'] >= 100:
             text = data['text']
             output = open(os.path.join(output_path, str(data['stars']), (data['review_id'] + '.txt')), 'w')
             output.write(text)
             output.close()
     return
 
+
+def content_word_extractor(input_folder_path, output_file):
+    """
+    This method extracts content words from all the txt files in a folder and generates a txt file of
+    the words with their count.
+    :param input_folder_path: the path to the folder that contains all source txt files
+    :param output_file: the path and filename of the output file
+    :return:
+    """
+    stopword_list = stopwords.words('english')
+    output = open(output_file, 'w')
+    files = os.listdir(input_folder_path)
+    files = [file for file in files if file.endswith('txt')]
+    c = Counter()
+    for filename in files:
+        file = open(os.path.join(input_folder_path, filename))
+        for line in file:
+            words = re.sub(r'(\w*)(\W+)(\w*|\W*)', r'\1 \3', line).split()
+            for word in words:
+                word = word.lower()
+                if word not in stopword_list:
+                    c[word] += 1
+    c = sorted(c.items(), key=lambda pair: pair[1], reverse=True)
+    for word in c:
+        output.write(word[0] + '\t' + str(word[1]) + '\n')
+    return
+
 # plot_n_most_reviews('./yelp_academic_dataset_business.json')
-# output_review('./yelp_academic_dataset_business.json', './yelp_academic_dataset_review.json', './reviews')
+output_review('./yelp_academic_dataset_business.json', './yelp_academic_dataset_review.json', './reviews')
+"""
+n = 1
+while n < 6:
+    content_word_extractor('./reviews/'+str(n)+'/', './reviews/'+str(n)+'.txt')
+    n += 1
+"""
