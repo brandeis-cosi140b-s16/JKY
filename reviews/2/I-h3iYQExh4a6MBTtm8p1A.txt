@@ -1,0 +1,1 @@
+The managers need to manage the stocks of food at the line. Everytime I go there, they're out of chicken, beans or something else. Forcing customers to wait while they cook food to catch up. It's not that hard to anticipate food levels and demand and prep food accordingly.

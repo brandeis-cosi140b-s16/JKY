@@ -5,6 +5,7 @@ import us
 from collections import defaultdict, Counter
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 
 def business_data_getter(bus_data_path, category='Restaurants'):
@@ -43,8 +44,6 @@ def business_subcate_stats(bus_data_path, category='Restaurants'):
             if item != category:
                 c[item] += bus_dict[bus]['review_count']
     return c
-
-
 
 
 def plot_n_most_reviews(bus_data_path, category='Restaurants', n=10):
@@ -86,4 +85,32 @@ def plot_n_most_reviews(bus_data_path, category='Restaurants', n=10):
     plt.show()
     return
 
-plot_n_most_reviews('./yelp_academic_dataset_business.json')
+
+def output_review(bus_data_path, review_data_path, output_path, category='Restaurants', subcate='Mexican'):
+    """
+    This method generates reviews text files for a given category of business and its subcategory. In the output path
+    there will be five folders, and each represents a star rating. Each review will be created as a separate text file
+    and named under its review id.
+    :param bus_data_path: the path to the yelp_academic_dataset_business.json file
+    :param review_data_path: the path to the yelp_academic_dataset_review.json file
+    :param output_path: the path to output the review text files
+    :param category: the category of business
+    :param subcate: the subcategory of a business
+    :return:
+    """
+    bus_dict = business_data_getter(bus_data_path, category)
+    review_file = open(review_data_path)
+    for line in review_file:
+        dump = json.dumps(line)
+        data = json.loads(json.loads(dump))
+        bus_id = data['business_id']
+        # stopwords_list = stopwords.words('english')
+        if bus_id in bus_dict and subcate in bus_dict[bus_id]['categories']:
+            text = data['text']
+            output = open(os.path.join(output_path, str(data['stars']), (data['review_id'] + '.txt')), 'w')
+            output.write(text)
+            output.close()
+    return
+
+# plot_n_most_reviews('./yelp_academic_dataset_business.json')
+# output_review('./yelp_academic_dataset_business.json', './yelp_academic_dataset_review.json', './reviews')
