@@ -3,18 +3,20 @@
 <!ELEMENT FOOD ( #PCDATA ) >
 <!ATTLIST FOOD comment CDATA "default value" >
 
-<!ELEMENT COREFERENCE ( #PCDATA ) >
-<!ATTLIST COREFERENCE comment CDATA "default value" >
+<!ELEMENT ANAPHORA ( #PCDATA ) >
+<!ATTLIST ANAPHORA comment CDATA "default value" >
 
-<!ELEMENT INGREDIENT ( #PCDATA ) >
-<!ATTLIST INGREDIENT comment CDATA "default value" >
-
-<!ELEMENT QUALITY ( # PCDATA ) >
-<!ATTLIST QUALITY type ( positive | negative | neutral ) >
+<!ELEMENT QUALITY ( #PCDATA ) >
+<!ATTLIST QUALITY type ( positive | negative | neutral ) #IMPLIED>
 <!ATTLIST QUALITY comment CDATA "default value" >
 
-<!ELEMENT CONNECTION EMPTY >
-<!ATTLIST COONECTION relationsip ( part-of | explicit-quality | implicit-quality | coreference ) #IMPLIED >
+<!ELEMENT PART_OF EMPTY >
+<!ATTLIST PART_OF comment CDATA "default value" >
 
+<!ELEMENT OPINION EMPTY >
+<!ATTLIST OPINION relationship ( explicit-quality | implicit-quality) #IMPLIED >
+<!ATTLIST OPINION comment CDATA "default value" >
 
+<!ELEMENT COREFERENCE ( #PCDATA ) >
+<!ATTLIST COREFERENCE comment CDATA "default value" >
 
