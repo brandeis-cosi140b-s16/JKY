@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 FEB 2016 09:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 FEB 2016 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -840,7 +840,7 @@ Missing character: There is no ™ in font cmr10!
 Here is how much of TeX's memory you used:
  18525 strings out of 493089
  406954 string characters out of 6134842
- 582255 words of memory out of 5000000
+ 582263 words of memory out of 5000000
  21673 multiletter control sequences out of 15000+600000
  7657 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -849,7 +849,7 @@ Here is how much of TeX's memory you used:
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr17.pfb>
-Output written on "Task Description.pdf" (1 page, 44970 bytes).
+Output written on "Task Description.pdf" (1 page, 45244 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream
