@@ -10,7 +10,7 @@
 <!ATTLIST INGREDIENT comment CDATA "default value" >
 
 <!ELEMENT QUALITY ( # PCDATA ) >
-<!ATTLIST QUALITY type ( positive | negative | neutral ) #IMPLIED "neutral" >
+<!ATTLIST QUALITY type ( positive | negative | neutral ) >
 <!ATTLIST QUALITY comment CDATA "default value" >
 
 <!ELEMENT CONNECTION EMPTY >
