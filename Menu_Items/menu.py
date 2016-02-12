@@ -3,7 +3,7 @@ import json, csv, codecs
 from pprint import pprint
 
 
-class Menu(object):
+class menu(object):
 
     def __init__(self, filename, outfile):
         """initializing a menu"""
@@ -11,7 +11,7 @@ class Menu(object):
         self.load(filename)
         self.menu_items = self.getItems()
         self.save(outfile)
-        print len(self.menu_items)
+        #print len(self.menu_items)
 		
     def load(self, filename):
         """load the filename in the folder"""
@@ -36,7 +36,7 @@ class Menu(object):
 
 
 
-m = Menu("restaurants.json", "menu_items")
+#m = menu("restaurants.json", "menu_items")
 
 
 """
