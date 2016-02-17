@@ -142,11 +142,30 @@ def content_word_extractor(input_folder_path, output_file):
         output.write(word[0] + '\t' + str(word[1]) + '\n')
     return
 
+
+def menu_item_tokenizer(input_path, output_path):
+    """
+
+    :param input_path:
+    :param output_path:
+    :return:
+    """
+    c = Counter()
+    file = open(input_path, encoding='utf-8')
+    for line in file:
+        line = re.sub(r'\d+\W\d*', r'', line).strip()
+        l = line.split()
+        for w in l:
+            c[w] += 1
+
+
+    return
+
+
 # plot_n_most_reviews('./yelp_academic_dataset_business.json')
-output_review('./yelp_academic_dataset_business.json', './yelp_academic_dataset_review.json', './reviews')
-"""
-n = 1
-while n < 6:
-    content_word_extractor('./reviews/'+str(n)+'/', './reviews/'+str(n)+'.txt')
-    n += 1
-"""
+# output_review('./yelp_academic_dataset_business.json', './yelp_academic_dataset_review.json', './reviews')
+#
+# n = 1
+# while n < 6:
+#    content_word_extractor('./reviews/'+str(n)+'/', './reviews/'+str(n)+'.txt')
+#    n += 1
