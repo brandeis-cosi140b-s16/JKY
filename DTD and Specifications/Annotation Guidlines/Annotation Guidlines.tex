@@ -94,7 +94,7 @@ The anaphora tag is to mark names or pronouns that refers to the food items or e
 \begin{enumerate}[resume]
 	\item I had the \textbf{\textcolor{blue}{carne asada potato}} with \textbf{\textcolor{blue}{cheese}} and oh my \textbf{\textcolor{yellow}{it}} was \textbf{\textcolor{red}{delicious$_{positive}$}}.\\
 	
-	<ANAPHORA id="A0" spans="51~53" text="it" comment="default value" />
+
 	\textsc{ANAPHORA}(text=\textbf{\textcolor{yellow}{it}})\\
 
 \end{enumerate}
@@ -137,5 +137,41 @@ The PART\_OF link tag describes a part-whole relation between an ingredient and 
 \subsection{COREFERENCE}
 \paragraph{}
 The CORREFERENCE tag links the anaphora with previous mention of the same entity. It serves, in addition, as the "to" object of the OPNION tag. Examples are as follows:
+
+\begin{enumerate}[resume]
+	\item I had the \textbf{\textcolor{blue}{carne asada potato}} with \textbf{\textcolor{blue}{cheese}} and oh my \textbf{\textcolor{yellow}{it}} was \textbf{\textcolor{red}{delicious$_{positive}$}}.\\
+	
+	\textsc{ANAPHORA}(text=\textbf{\textcolor{yellow}{it}})\\
+	
+	\textsc{COREFERENCE}(from=\textbf{\textcolor{blue}{it}} to=\textbf{\textcolor{blue}{carne asada potato}}) \\
+	
+
+\end{enumerate}
+
+\begin{enumerate}[resume]
+	\item I had the \textbf{\textcolor{blue}{carne asada potato}} with \textbf{\textcolor{blue}{cheese}} and oh my \textbf{\textcolor{yellow}{it}} was \textbf{\textcolor{red}{delicious$_{positive}$}}.\\
+	
+	\textsc{ANAPHORA}(text=\textbf{\textcolor{yellow}{it}})\\
+	
+	\textsc{COREFERENCE}(from=\textbf{\textcolor{blue}{it}} to=\textbf{\textcolor{blue}{carne asada potato}}) \\
+\end{enumerate}
+
+\paragraph{}
+In the following example, the ANAPHORA \textbf{\textcolor{yellow}{both}} should be linked with the closest previous mentions of the entity, which is \textbf{\textcolor{blue}{mango}} and \textbf{\textcolor{blue}{cantaloupe/watermelon}} instead of \textbf{\textcolor{blue}{agua frescas}}.
+
+\begin{enumerate}[resume]
+	\item We ordered two \textbf{\textcolor{blue}{agua frescas}}. One was  \textbf{\textcolor{blue}{mango}} and the other was 
+	\textbf{\textcolor{blue}{cantaloupe/watermelon}} on the waitress' recommendation. Wow! 
+	\textbf{\textcolor{yellow}{both}} were so 
+	\textbf{\textcolor{red}{fresh$_{positive}$}} and 
+	\textbf{\textcolor{red}{delicious$_{positive}$}}.
+	\\
+	
+	\textsc{ANAPHORA}(text=\textbf{\textcolor{yellow}{Both}})\\
+
+	\textsc{COREFERENCE}(from=\textbf{\textcolor{blue}{Both}} to=\textbf{\textcolor{blue}{mango}}) \\
+	\textsc{COREFERENCE}(from=\textbf{\textcolor{blue}{it}} to=\textbf{\textcolor{blue}{cantaloupe/watermelon}}) \\
+	
+\end{enumerate}
 
 \end{document}
