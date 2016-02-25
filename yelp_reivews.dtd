@@ -14,7 +14,7 @@
 <!ATTLIST PART_OF comment CDATA "default value" >
 
 <!ELEMENT OPINION EMPTY >
-<!ATTLIST OPINION relationship ( explicit-quality | implicit-quality) #REQUIRED>
+<!ATTLIST OPINION relationship ( explicit-quality | implicit-quality ) #REQUIRED>
 <!ATTLIST OPINION comment CDATA "default value" >
 
 <!ELEMENT COREFERENCE EMPTY >
