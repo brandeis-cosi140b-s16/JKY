@@ -12,10 +12,11 @@
 \contentsline {paragraph}{}{3}
 \contentsline {subsection}{\numberline {2.3}ANAPHORA}{3}
 \contentsline {paragraph}{}{3}
-\contentsline {section}{\numberline {3}Link Tags}{4}
-\contentsline {subsection}{\numberline {3.1}PART\_OF}{4}
-\contentsline {paragraph}{}{4}
-\contentsline {subsection}{\numberline {3.2}OPINION}{4}
-\contentsline {paragraph}{}{4}
-\contentsline {subsection}{\numberline {3.3}COREFERENCE}{4}
+\contentsline {section}{\numberline {3}Link Tags}{5}
+\contentsline {subsection}{\numberline {3.1}PART\_OF}{5}
 \contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {3.2}OPINION}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {3.3}COREFERENCE}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{6}
