@@ -1,22 +1,15 @@
-<!ENTITY name "yelp_reviews">
+<!ENTITY name "yelp_reviews_1.1">
 
 <!ELEMENT FOOD ( #PCDATA ) >
-<!ATTLIST FOOD comment CDATA "default value" >
 
 <!ELEMENT ANAPHORA ( #PCDATA ) >
-<!ATTLIST ANAPHORA comment CDATA "default value" >
 
 <!ELEMENT QUALITY ( #PCDATA ) >
 <!ATTLIST QUALITY type ( positive | negative | neutral ) #REQUIRED>
-<!ATTLIST QUALITY comment CDATA "default value" >
 
 <!ELEMENT PART_OF EMPTY >
-<!ATTLIST PART_OF comment CDATA "default value" >
 
 <!ELEMENT OPINION EMPTY >
-<!ATTLIST OPINION relationship ( explicit-quality | implicit-quality ) #REQUIRED>
-<!ATTLIST OPINION comment CDATA "default value" >
+<!ATTLIST OPINION relationship ( explicit | implicit ) #REQUIRED>
 
 <!ELEMENT COREFERENCE EMPTY >
-<!ATTLIST COREFERENCE comment CDATA "default value" >
-
