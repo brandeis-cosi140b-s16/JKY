@@ -51,9 +51,9 @@ For example:
 \item I had a \textbf{\textcolor{blue}{Shrimp dish}} that was \textbf{\textcolor{red}{out of this world$_{positive}$}} and \textbf{\textcolor{yellow}{it}} was served over \textbf{\textcolor{red}{amazing$_{positive}$ fresh$_{positive}$}} \textbf{\textcolor{blue}{veggies}}. \\
 \textsc{part\_of}(from=\textbf{\textcolor{blue}{veggies}}, to=\textbf{\textcolor{yellow}{it}}) \\
 \textsc{coreference}(from=\textbf{\textcolor{yellow}{it}}, to=\textbf{\textcolor{blue}{Shrimp dish}})\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{out of this world}}, to=\textbf{\textcolor{blue}{Shrimp dish}} , relation=``positive")\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{amazing}}, to=\textbf{\textcolor{blue}{veggies}} , relation=``positive")\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{fresh}}, to=\textbf{\textcolor{blue}{veggies}} , relation=``positive")
+\textsc{opinion}(from=\textbf{\textcolor{red}{out of this world}}, to=\textbf{\textcolor{blue}{Shrimp dish}} , relation=``explicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{amazing}}, to=\textbf{\textcolor{blue}{veggies}} , relation=``explicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{fresh}}, to=\textbf{\textcolor{blue}{veggies}} , relation=``explicit-opinion")
 \end{enumerate}
 
 \newpage
@@ -64,8 +64,8 @@ For example:
 The FOOD tag concerns with specific food or beverage names, i.e. corns, beans, burritos, street tacos, margaritas, etc. When annotating a food name, articles (i.e. \textit{a} and \textit{the}) should be excluded. For example:
 \begin{enumerate}[resume]
 \item The \textbf{\textcolor{blue}{chips}} and \textbf{\textcolor{blue}{salsa}} were \textbf{\textcolor{red}{great$_{positive}$}}.\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{great}}, to=\textbf{\textcolor{blue}{chips}} , relation=``positive")\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{great}}, to=\textbf{\textcolor{blue}{salsa}} , relation=``positive")
+\textsc{opinion}(from=\textbf{\textcolor{red}{great}}, to=\textbf{\textcolor{blue}{chips}} , relation=``explicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{great}}, to=\textbf{\textcolor{blue}{salsa}} , relation=``explicit-opinion")
 \end{enumerate}
 
 \paragraph{}
@@ -85,6 +85,22 @@ When the generic term ``food'' is used, it should not be annotated. In the follo
 
 \subsection{QUALITY}
 \paragraph{}
+The quality tag marks words or phrases that indicate an explicit or implicit description of the quality of a specific food or list of foods. Quality is often indicated by by an adjective describing a particular food or an modifying an anaphora that is coreferent to a particular food. Quality should be marked as either positive, negative, or neutral. For example, in the following review, the quality descriptions indicate positive qualities of the food.
+
+\begin{enumerate}[resume]
+\item The tacos there are SO goodpositive , and SO cheappositive...its easy to justify coming back again and again and again.\\
+OPINION(from=SO good, to=tacos, relation= “explicit”)\\
+OPINION(from=SO cheap, to=tacos relation=”explicit”)
+\end{enumerate}
+
+In the following review the quality of “Don’t order” is neutral because the description of “chicken” is not indicating anything about the chicken, but instead, mentioning it to serve as a comparison. Also note that in the tag for “You will be amazed”, the span is the entire sentence. 
+
+\begin{enumerate}[resume]
+\item Be adventurous. Don't orderneutral the chicken. Try lengua, or suadero! You will be amazedpositive.\\
+	OPINION(from=Don’t order, to=tacos, relation=”explicit”)\\
+	OPINION(from=You will be amazed, to=lengua, relation=”implicit”)\\
+	OPINION(from=You will be amazed, to=suadero, relation=”implicit)
+\end{enumerate}
 
 
 \subsection{ANAPHORA}
@@ -94,7 +110,7 @@ The anaphora tag is to mark names or pronouns that refers to the food items or e
 \begin{enumerate}[resume]
 	\item I had the \textbf{\textcolor{blue}{carne asada potato with cheese}} and oh my \textbf{\textcolor{yellow}{it}} was \textbf{\textcolor{red}{delicious$_{positive}$}}.\\
 	\textsc{coreference}(from=\textbf{\textcolor{yellow}{it}}, to=\textbf{\textcolor{blue}{carne asada potato with cheese}})\\
-		\textsc{opinion}(from=\textbf{\textcolor{red}{delicious}}, to=\textbf{\textcolor{yellow}{it}}, relation=``positive'')\\
+		\textsc{opinion}(from=\textbf{\textcolor{red}{delicious}}, to=\textbf{\textcolor{yellow}{it}}, relation=``explicit-opinion'')\\
 \end{enumerate}
 
 \begin{enumerate}[resume]
@@ -127,6 +143,20 @@ The PART\_OF link tag describes a part-whole relation between an ingredient and 
 
 \subsection{OPINION}
 \paragraph{}
+The opinion tag links quality descriptions to the foods that they are referring to. The links are labeled with “explicit” or “implicit”. Explicit opinions are those that clearly describe aspects of the food, such as “fresh”, “delicious”, or “cheesy”. Implicit opinions are those where the quality is inferred from the description, such as in example 7, where the sentence “You will be amazed” does not directly refer to the foods “lengua” and “suadero”, but it implicitly applies that the foods are good. 
+
+\begin{enumerate}[resume]
+\item The only okayneutral dish was their chips and salsa. Do not ordernegative the enchilada suiza. It tastes nastynegative and do not ordernegative their beans and rice. \\
+OPINION(from=okay, to=chips, relation=”explicit”)\\
+OPINION(from=okay, to=salsa, relation=”explicit”)\\
+OPINION(from=Do not order, to=enchilada suiza, relation=”implicit”)\\
+OPINION(from=nasty, to=it, relation=”explicit”)\\
+OPINION(from=do not order, to=beans, relation=”implicit”)\\
+OPINION(from=do not order, to=rice, relation=”implicit”)\\
+COREFERENCE(from=it, to=enchilada suiza)
+\end{enumerate}
+
+
 
 \subsection{COREFERENCE}
 \paragraph{}
