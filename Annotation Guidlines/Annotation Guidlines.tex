@@ -51,9 +51,9 @@ For example:
 \item I had a \textbf{\textcolor{blue}{Shrimp dish}} that was \textbf{\textcolor{red}{out of this world$_{positive}$}} and \textbf{\textcolor{yellow}{it}} was served over \textbf{\textcolor{red}{amazing$_{positive}$ fresh$_{positive}$}} \textbf{\textcolor{blue}{veggies}}. \\
 \textsc{part\_of}(from=\textbf{\textcolor{blue}{veggies}}, to=\textbf{\textcolor{yellow}{it}}) \\
 \textsc{coreference}(from=\textbf{\textcolor{yellow}{it}}, to=\textbf{\textcolor{blue}{Shrimp dish}})\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{out of this world}}, to=\textbf{\textcolor{blue}{Shrimp dish}} , relation=``positive")\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{amazing}}, to=\textbf{\textcolor{blue}{veggies}} , relation=``positive")\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{fresh}}, to=\textbf{\textcolor{blue}{veggies}} , relation=``positive")
+\textsc{opinion}(from=\textbf{\textcolor{red}{out of this world}}, to=\textbf{\textcolor{blue}{Shrimp dish}} , relation=``explicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{amazing}}, to=\textbf{\textcolor{blue}{veggies}} , relation=``explicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{fresh}}, to=\textbf{\textcolor{blue}{veggies}} , relation=``explicit-opinion")
 \end{enumerate}
 
 \newpage
@@ -64,8 +64,32 @@ For example:
 The FOOD tag concerns with specific food or beverage names, i.e. corns, beans, burritos, street tacos, margaritas, etc. When annotating a food name, articles (i.e. \textit{a} and \textit{the}) should be excluded. For example:
 \begin{enumerate}[resume]
 \item The \textbf{\textcolor{blue}{chips}} and \textbf{\textcolor{blue}{salsa}} were \textbf{\textcolor{red}{great$_{positive}$}}.\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{great}}, to=\textbf{\textcolor{blue}{chips}} , relation=``positive")\\
-\textsc{opinion}(from=\textbf{\textcolor{red}{great}}, to=\textbf{\textcolor{blue}{salsa}} , relation=``positive")
+\textsc{opinion}(from=\textbf{\textcolor{red}{great}}, to=\textbf{\textcolor{blue}{chips}} , relation=``explicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{great}}, to=\textbf{\textcolor{blue}{salsa}} , relation=``explicit-opinion")
+\end{enumerate}
+
+Moreover, when the toppings or sides of a dish is mentioned in the food name, the whole noun phrase should be tag as a FOOD tag, as shown in the following example.
+
+\begin{enumerate}[resume]
+	\item I had the \textbf{\textcolor{blue}{carne asada potato with cheese}} and oh my \textbf{\textcolor{yellow}{it}} was \textbf{\textcolor{red}{delicious$_{positive}$}}.\\
+	\textsc{coreference}(from=\textbf{\textcolor{yellow}{it}}, to=\textbf{\textcolor{blue}{carne asada potato with cheese}})\\
+		\textsc{opinion}(from=\textbf{\textcolor{red}{delicious}}, to=\textbf{\textcolor{yellow}{it}}, relation=``explicit-opinion'')\\
+\end{enumerate}
+
+There are instances where there should be more than one FOOD extent tags for the same food name. Take the following review as an example, \textbf{\textcolor{blue}{agua frescas}} in this case are two different instances: one is mango kind, and the other one is cantaloupe/watermelon kind. Since they are two different dishes, there should be two different FOOD tags for the phrase \textbf{\textcolor{blue}{agua frescas}}, and their anaphora should be connected to the corresponding dish name.
+
+\begin{enumerate}[resume]
+\item We ordered two \textbf{\textcolor{blue}{agua frescas}}. \textbf{\textcolor{yellow}{One}} was  \textbf{\textcolor{blue}{mango}} and \textbf{\textcolor{yellow}{the other}} was 
+\textbf{\textcolor{blue}{cantaloupe/watermelon}} on the waitress' recommendation. Wow! 
+\textbf{\textcolor{yellow}{both}} were so 
+\textbf{\textcolor{red}{fresh$_{positive}$}} and 
+\textbf{\textcolor{red}{delicious$_{positive}$}}.\\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{One}}, to=\textbf{\textcolor{blue}{agua frescas$_{1}$}}) \\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{the other}}, to=\textbf{\textcolor{blue}{agua frescas$_{2}$}}) \\
+\textsc{part\_of}(from=\textbf{\textcolor{blue}{mango}}, to=\textbf{\textcolor{yellow}{One}})\\
+\textsc{part\_of}(from=\textbf{\textcolor{blue}{cantaloupe/watermelon}}, to=\textbf{\textcolor{yellow}{the other}})\\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{both}}, to=\textbf{\textcolor{blue}{mango}}) \\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{both}}, to=\textbf{\textcolor{blue}{cantaloupe/watermelon}}) \\
 \end{enumerate}
 
 \paragraph{}
@@ -85,39 +109,54 @@ When the generic term ``food'' is used, it should not be annotated. In the follo
 
 \subsection{QUALITY}
 \paragraph{}
+The quality tag marks words or phrases that indicate an explicit or implicit description of the quality of a specific food or list of foods. Quality is often indicated by by an adjective describing a particular food or an modifying an anaphora that is coreferent to a particular food. Quality should be marked as either positive, negative, or neutral. For example, in the following review, the quality descriptions indicate positive qualities of the food.
+
+\begin{enumerate}[resume]
+\item The tacos there are \textbf{\textcolor{red}{SO good$_{positive}$}} , and \textbf{\textcolor{red}{SO cheap$_{positive}$}}...its easy to justify coming back again and again and again.\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{SO good}}, to=\textbf{\textcolor{blue}{tacos}}, relation= ``explicit-opinion'')\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{SO cheap}}, to=\textbf{\textcolor{blue}{tacos}} relation=``explicit-opinion'')
+\end{enumerate}
+
+In the following review the quality of ``Don't order'' is neutral because the description of ``chicken'' is not indicating anything about the chicken, but instead, mentioning it to serve as a comparison. Also note that in the tag for ``You will be amazed'', the span is the entire sentence. 
+
+\begin{enumerate}[resume]
+\item Be adventurous. \textbf{\textcolor{red}{Don't order$_{neutral}$}} the \textbf{\textcolor{blue}{chicken}}. Try \textbf{\textcolor{blue}{lengua}}, or \textbf{\textcolor{blue}{suadero}}! You will be \textbf{\textcolor{red}{amazed$_{positive}$}}.\\
+	\textsc{opinion}(from=\textbf{\textcolor{red}{Don't order}}, to=\textbf{\textcolor{blue}{tacos}}, relation=``explicit-opinion'')\\
+	\textsc{opinion}(from=\textbf{\textcolor{red}{You will be amazed}}, to=\textbf{\textcolor{blue}{lengua}}, relation=``implicit-opinion'')\\
+	\textsc{opinion}(from=\textbf{\textcolor{red}{You will be amazed}}, to=\textbf{\textcolor{blue}{suadero}}, relation=``implicit-opinion'')
+\end{enumerate}
 
 
 \subsection{ANAPHORA}
 \paragraph{}
-The anaphora tag is to mark names or pronouns that refers to the food items or entities mentioned in previous sentences or paragraphs. An anaphora could be a pronoun like "it", "they", "both", or another name for the food. This tag is created because we want to include syntactic structure of the sentence. Mentions of "it was delicious" bears syntactic relations between "it" and "delicious". The use of anaphora enables the link between quality and food be in the same sentence or clause, which will be discussed in "OPINION" session. Some examples of anaphoras are listed below:
+The anaphora tag is to mark names or pronouns that refers to the food items or entities mentioned in previous sentences or paragraphs. An anaphora could be a pronoun like "it", "they", "both", or another name for the food. The use of anaphora enables the link between quality and food be in the same sentence or clause, which will be discussed in "OPINION" session. Some examples of anaphoras are listed below:
 
 \begin{enumerate}[resume]
 	\item I had the \textbf{\textcolor{blue}{carne asada potato with cheese}} and oh my \textbf{\textcolor{yellow}{it}} was \textbf{\textcolor{red}{delicious$_{positive}$}}.\\
 	\textsc{coreference}(from=\textbf{\textcolor{yellow}{it}}, to=\textbf{\textcolor{blue}{carne asada potato with cheese}})\\
-		\textsc{opinion}(from=\textbf{\textcolor{red}{delicious}}, to=\textbf{\textcolor{yellow}{it}}, relation=``positive'')\\
+		\textsc{opinion}(from=\textbf{\textcolor{red}{delicious}}, to=\textbf{\textcolor{yellow}{it}}, relation=``explicit-opinion'')\\
 \end{enumerate}
 
 \begin{enumerate}[resume]
-	\item We ordered two \textbf{\textcolor{blue}{agua frescas}}. \textbf{\textcolor{yellow}{One}} was  \textbf{\textcolor{blue}{mango}} and the \textbf{\textcolor{yellow}{other}} was 
-	\textbf{\textcolor{blue}{cantaloupe/watermelon}} on the waitress' recommendation. Wow! 
-	\textbf{\textcolor{yellow}{both}} were so 
-	\textbf{\textcolor{red}{fresh$_{positive}$}} and 
-	\textbf{\textcolor{red}{delicious$_{positive}$}}.\\
-	
-		\textsc{COREFERENCE}(from=\textbf{\textcolor{yellow}{Both}} to=\textbf{\textcolor{blue}{mango}}) \\
-		\textsc{COREFERENCE}(from=\textbf{\textcolor{yellow}{Both}} to=\textbf{\textcolor{blue}{cantaloupe/watermelon}}) \\
-		\textsc{COREFERENCE}(from=\textbf{\textcolor{yellow}{One}} to=\textbf{\textcolor{blue}{agua frescas}}) \\
-		\textsc{COREFERENCE}(from=\textbf{\textcolor{yellow}{other}} to=\textbf{\textcolor{blue}{agua frescas}}) \\
-	
+\item We ordered two \textbf{\textcolor{blue}{agua frescas}}. \textbf{\textcolor{yellow}{One}} was  \textbf{\textcolor{blue}{mango}} and \textbf{\textcolor{yellow}{the other}} was 
+\textbf{\textcolor{blue}{cantaloupe/watermelon}} on the waitress' recommendation. Wow! 
+\textbf{\textcolor{yellow}{both}} were so 
+\textbf{\textcolor{red}{fresh$_{positive}$}} and 
+\textbf{\textcolor{red}{delicious$_{positive}$}}.\\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{One}}, to=\textbf{\textcolor{blue}{agua frescas$_{1}$}}) \\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{the other}}, to=\textbf{\textcolor{blue}{agua frescas$_{2}$}}) \\
+\textsc{part\_of}(from=\textbf{\textcolor{blue}{mango}}, to=\textbf{\textcolor{yellow}{One}})\\
+\textsc{part\_of}(from=\textbf{\textcolor{blue}{cantaloupe/watermelon}}, to=\textbf{\textcolor{yellow}{the other}})\\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{both}}, to=\textbf{\textcolor{blue}{mango}}) \\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{both}}, to=\textbf{\textcolor{blue}{cantaloupe/watermelon}}) \\
 \end{enumerate}
-
 \newpage
 \section{Link Tags}
 
 
 \subsection{PART\_OF}
 \paragraph{}
-The PART\_OF link tag describes a part-whole relation between an ingredient and a dish, or between a dish and a combo. The predicative argument structure \textsc{part\_of}(from=text\#1, to=text\#2) indicates, \textit{text\#1 is part of text\#2}. The following is an example of PART\_OF relation between ingredients and a dish.
+The PART\_OF link tag describes a part-whole relation between an ingredient and a dish, or between a dish and a combo. The predicative argument structure \textsc{part\_of}(from=text\#1, to=text\#2) indicates, \textit{text\#1 is part of text\#2}. The following is an example of PART\_OF relation between ingredients and a dish. The ingredients should be connected to the closet mention of a dish or its anaphora. 
 
 \begin{enumerate}[resume]
 \item I just couldn't believe my eyes when I saw all the stuff they squeezed into \textbf{\textcolor{blue}{both sandwiches}}! \textbf{\textcolor{blue}{Ham}}, \textbf{\textcolor{blue}{pork sirloin}}, \textbf{\textcolor{blue}{chorizo}}, \textbf{\textcolor{blue}{sausage}}, \textbf{\textcolor{blue}{egg}}, \textbf{\textcolor{blue}{avocado}}, \textbf{\textcolor{blue}{jalapenos}}, \textbf{\textcolor{blue}{breaded beef}}.\\
@@ -133,43 +172,46 @@ The PART\_OF link tag describes a part-whole relation between an ingredient and 
 
 \subsection{OPINION}
 \paragraph{}
+The opinion tag links quality descriptions to the foods that they are referring to. The links are labeled with “explicit” or “implicit”. Explicit opinions are those that clearly describe aspects of the food, such as “fresh”, “delicious”, or “cheesy”. Implicit opinions are those where the quality is inferred from the description, such as in example 7, where the sentence “You will be amazed” does not directly refer to the foods “lengua” and “suadero”, but it implicitly applies that the foods are good. 
+
+\begin{enumerate}[resume]
+\item The only \textbf{\textcolor{red}{okay$_{neutral}$}} dish was their \textbf{\textcolor{blue}{chips}} and \textbf{\textcolor{blue}{salsa}}. \textbf{\textcolor{red}{Do not order$_{negative}$}} the \textbf{\textcolor{blue}{enchilada suiza}}. It tastes \textbf{\textcolor{red}{nasty$_{negative}$}} and \textbf{\textcolor{red}{do not order$_{negative}$}} their \textbf{\textcolor{blue}{beans}} and \textbf{\textcolor{blue}{rice}}. \\
+\textsc{opinion}(from=\textbf{\textcolor{red}{okay}}, to=\textbf{\textcolor{blue}{chips}}, relation=``explicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{okay}}, to=\textbf{\textcolor{blue}{salsa}}, relation=``explicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{Do not order}}, to=\textbf{\textcolor{blue}{enchilada suiza}}, relation=``implicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{nasty}}, to=\textbf{\textcolor{yellow}{it}}, relation=``explicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{do not order}}, to=\textbf{\textcolor{blue}{beans}}, relation=``implicit-opinion")\\
+\textsc{opinion}(from=\textbf{\textcolor{red}{do not order}}, to=\textbf{\textcolor{blue}{rice}}, relation=``implicit-opinion")\\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{it}}, to=\textbf{\textcolor{blue}{enchilada suiza}})
+\end{enumerate}
+
+
 
 \subsection{COREFERENCE}
 \paragraph{}
 The CORREFERENCE tag links the anaphora with previous mention of the same entity. It serves, in addition, as the "to" object of the OPNION tag. Examples are as follows:
 
-%\begin{enumerate}[resume]
-%	\item I had the \textbf{\textcolor{blue}{carne asada potato}} with \textbf{\textcolor{blue}{cheese}} and oh my \textbf{\textcolor{yellow}{it}} was \textbf{\textcolor{red}{delicious$_{positive}$}}.\\
-	
-%	\textsc{ANAPHORA}(text=\textbf{\textcolor{yellow}{it}})\\
-	
-%	\textsc{COREFERENCE}(from=\textbf{\textcolor{blue}{it}} to=\textbf{\textcolor{blue}{carne asada potato}}) \\
-	
-
-%\end{enumerate}
-
 \begin{enumerate}[resume]
-	\item I had the \textbf{\textcolor{blue}{carne asada potato}} with \textbf{\textcolor{blue}{cheese}} and oh my \textbf{\textcolor{yellow}{it}} was \textbf{\textcolor{red}{delicious$_{positive}$}}.\\
-	
-	%\textsc{ANAPHORA}(text=\textbf{\textcolor{yellow}{it}})\\
-	
-	\textsc{COREFERENCE}(from=\textbf{\textcolor{blue}{it}} to=\textbf{\textcolor{blue}{carne asada potato}}) \\
+	\item I had the \textbf{\textcolor{blue}{carne asada potato with cheese}} and oh my \textbf{\textcolor{yellow}{it}} was \textbf{\textcolor{red}{delicious$_{positive}$}}.\\
+	\textsc{coreference}(from=\textbf{\textcolor{yellow}{it}}, to=\textbf{\textcolor{blue}{carne asada potato with cheese}})\\
+		\textsc{opinion}(from=\textbf{\textcolor{red}{delicious}}, to=\textbf{\textcolor{yellow}{it}}, relation=``explicit-opinion'')\\
 \end{enumerate}
 
 \paragraph{}
 In the following example, the ANAPHORA \textbf{\textcolor{yellow}{both}} should be linked with the closest previous mentions of the entity, which is \textbf{\textcolor{blue}{mango}} and \textbf{\textcolor{blue}{cantaloupe/watermelon}} instead of \textbf{\textcolor{blue}{agua frescas}}.
 
 \begin{enumerate}[resume]
-	\item We ordered two \textbf{\textcolor{blue}{agua frescas}}. \textbf{\textcolor{yellow}{One}} was  \textbf{\textcolor{blue}{mango}} and the \textbf{\textcolor{yellow}{other}} was 
-	\textbf{\textcolor{blue}{cantaloupe/watermelon}} on the waitress' recommendation. Wow! 
-	\textbf{\textcolor{yellow}{both}} were so 
-	\textbf{\textcolor{red}{fresh$_{positive}$}} and 
-	\textbf{\textcolor{red}{delicious$_{positive}$}}.\\
-	
-	\textsc{COREFERENCE}(from=\textbf{\textcolor{yellow}{Both}} to=\textbf{\textcolor{blue}{mango}}) \\
-	\textsc{COREFERENCE}(from=\textbf{\textcolor{yellow}{Both}} to=\textbf{\textcolor{blue}{cantaloupe/watermelon}}) \\
-	\textsc{COREFERENCE}(from=\textbf{\textcolor{yellow}{One}} to=\textbf{\textcolor{blue}{agua frescas}}) \\
-	\textsc{COREFERENCE}(from=\textbf{\textcolor{yellow}{other}} to=\textbf{\textcolor{blue}{agua frescas}}) \\	
+\item We ordered two \textbf{\textcolor{blue}{agua frescas}}. \textbf{\textcolor{yellow}{One}} was  \textbf{\textcolor{blue}{mango}} and \textbf{\textcolor{yellow}{the other}} was 
+\textbf{\textcolor{blue}{cantaloupe/watermelon}} on the waitress' recommendation. Wow! 
+\textbf{\textcolor{yellow}{both}} were so 
+\textbf{\textcolor{red}{fresh$_{positive}$}} and 
+\textbf{\textcolor{red}{delicious$_{positive}$}}.\\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{One}}, to=\textbf{\textcolor{blue}{agua frescas$_{1}$}}) \\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{the other}}, to=\textbf{\textcolor{blue}{agua frescas$_{2}$}}) \\
+\textsc{part\_of}(from=\textbf{\textcolor{blue}{mango}}, to=\textbf{\textcolor{yellow}{One}})\\
+\textsc{part\_of}(from=\textbf{\textcolor{blue}{cantaloupe/watermelon}}, to=\textbf{\textcolor{yellow}{the other}})\\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{both}}, to=\textbf{\textcolor{blue}{mango}}) \\
+\textsc{coreference}(from=\textbf{\textcolor{yellow}{both}}, to=\textbf{\textcolor{blue}{cantaloupe/watermelon}}) \\
 \end{enumerate}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAR 2016 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAR 2016 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,19 +825,28 @@ Package caption Info: End \AtBeginDocument code.
 
  [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 74--77
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--114
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--93
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 135--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--124
+Underfull \hbox (badness 10000) in paragraph at lines 141--152
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 136--145
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 162--171
 
  []
 
@@ -890,20 +899,20 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--171
+Underfull \hbox (badness 10000) in paragraph at lines 195--198
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 177--184
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 204--215
 
  []
 
-[6] (./Annotation Guidlines.aux) ) 
+[7] (./Annotation Guidlines.aux) ) 
 Here is how much of TeX's memory you used:
  19756 strings out of 493089
  429004 string characters out of 6134842
- 603353 words of memory out of 5000000
+ 604353 words of memory out of 5000000
  22880 multiletter control sequences out of 15000+600000
  9670 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -916,11 +925,12 @@ e1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti10.pfb>
-Output written on "Annotation Guidlines.pdf" (6 pages, 120587 bytes).
+amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti10.pfb>
+Output written on "Annotation Guidlines.pdf" (7 pages, 128936 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
