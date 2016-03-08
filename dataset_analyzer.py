@@ -7,8 +7,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 from nltk.corpus import stopwords
-from nltk.corpus import wordnet as wn
+import operator
 import re
+import shutil
 
 
 def business_data_getter(bus_data_path, category='Restaurants'):
@@ -110,7 +111,10 @@ def output_review(bus_data_path, review_data_path, output_path, category='Restau
         # stopwords_list = stopwords.words('english')
         if bus_id in bus_dict and subcate in bus_dict[bus_id]['categories'] and bus_dict[bus_id]['review_count'] >= 100:
             text = data['text']
-            output = open(os.path.join(output_path, str(data['stars']), (data['review_id'] + '.txt')), 'w')
+            bus_name = bus_dict[bus_id]['name']
+            if not os.path.exists(os.path.join(output_path, bus_name)):
+                os.mkdir(os.path.join(output_path, bus_name))
+            output = open(os.path.join(output_path, bus_name, (data['review_id'] + '.txt')), 'w')
             output.write(text)
             output.close()
     return
@@ -143,29 +147,61 @@ def content_word_extractor(input_folder_path, output_file):
     return
 
 
-def menu_item_tokenizer(input_path, output_path):
-    """
-
-    :param input_path:
-    :param output_path:
-    :return:
-    """
-    c = Counter()
-    file = open(input_path, encoding='utf-8')
-    for line in file:
-        line = re.sub(r'\d+\W\d*', r'', line).strip()
-        l = line.split()
-        for w in l:
-            c[w] += 1
-
-
+def filter_reviews_by_menu(input_path, menu_list, output_path):
+    bus_folders = [bus_folder for bus_folder in os.listdir(input_path) if bus_folder != '.DS_Store']
+    menu = open(menu_list, 'r')
+    menu = [re.sub(r'\n', '', m) for m in menu]
+    if not os.path.exists(output_path):
+        os.mkdir(output_path)
+    for b in bus_folders:
+        reviews = [review for review in os.listdir(os.path.join(input_path, b)) if review.endswith('.txt')]
+        for r in reviews:
+            f = open(os.path.join(input_path, b, r))
+            text = ' '.join([re.sub(r'\n', '', m) for m in menu])
+            for m in menu:
+                if m in text:
+                    if not os.path.exists(os.path.join(output_path, b)):
+                        os.mkdir(os.path.join(output_path, b))
+                    shutil.copy(os.path.join(input_path, b, r), os.path.join(output_path, b, r))
+                    break
     return
 
 
+def review_summary(bus_data_path, output_path, category='Restaurants', subcate='Mexican'):
+    """
+    This method generates reviews text files for a given category of business and its subcategory. In the output path
+    there will be five folders, and each represents a star rating. Each review will be created as a separate text file
+    and named under its review id.
+    :param bus_data_path: the path to the yelp_academic_dataset_business.json file
+    :param review_data_path: the path to the yelp_academic_dataset_review.json file
+    :param output_path: the path to output the review text files
+    :param category: the category of business
+    :param subcate: the subcategory of a business
+    :return:
+    """
+    bus_dict = business_data_getter(bus_data_path, category)
+    output_file = open(output_path, 'w')
+    review_dict = defaultdict(float)
+    for bus_id in bus_dict:
+        if subcate in bus_dict[bus_id]['categories'] and bus_dict[bus_id]['review_count'] >= 100:
+            # text = data['text']
+            bus_name = bus_dict[bus_id]['name']
+            stars = bus_dict[bus_id]['stars']
+            # output_file.write(bus_name + ' ' + stars)
+            review_dict[bus_name] = stars
+    sorted_review_dict = sorted(review_dict.items(), key=operator.itemgetter(1))
+    for b in sorted_review_dict:
+        output_file.write(b[0] + ' ' + str(b[1]) + '\n')
+    output_file.close()
+    return
+
 # plot_n_most_reviews('./yelp_academic_dataset_business.json')
-# output_review('./yelp_academic_dataset_business.json', './yelp_academic_dataset_review.json', './reviews')
+# output_review('./yelp_academic_dataset_business.json', './yelp_academic_dataset_review.json', './reviews/by_business')
 #
 # n = 1
 # while n < 6:
 #    content_word_extractor('./reviews/'+str(n)+'/', './reviews/'+str(n)+'.txt')
 #    n += 1
+# filter_reviews_by_menu('./reviews/by_business', './mexicanfoodlist.txt', './reviews/by_business_filtered')
+review_summary('./yelp_academic_dataset_business.json', 'bus_reviews.txt')
+

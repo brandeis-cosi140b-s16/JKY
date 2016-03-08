@@ -1,0 +1,306 @@
+Calico Jack's 1.5
+360 Gourmet Burrito 1.5
+Jose Cuervo Tequileria 2.0
+Sammy's Beach Bar & Grill 2.0
+Carlos' n Charlie's 2.0
+Señor Frog's 2.0
+Salty Senorita 2.5
+On the Border Mexican Grill & Cantina 2.5
+Sylvia's La Canasta Mexican Restaurant 2.5
+Steel Cactus 2.5
+Aunt Chilada's Tempe 2.5
+Coconuts Beach Bar & Mexican Grill 2.5
+Pepe's Tacos 2.5
+San Felipe's Cantina 2.5
+Barrio Cafe 3.0
+Mi Amigo's Mexican Grill 3.0
+Dos Gringos 3.0
+Macayo's Mexican Kitchen 3.0
+Macayo's Mexican Restaurant 3.0
+El Encanto DOS 3.0
+RuRu's Tacos + Tequila 3.0
+Rosita's Fine Mexican Food 3.0
+La Casa Blanca 3.0
+Matta's Grill and Cantina 3.0
+Sandbar Mexican Grill 3.0
+Pancho's 3.0
+Cantina 1511 3.0
+La Salsa Cantina 3.0
+Taco Haus 3.0
+Diablo's Cantina 3.0
+Old Town Tortilla Factory 3.0
+Tee Pee Mexican Food 3.0
+Garduños 3.0
+China Poblano 3.0
+Someburros 3.0
+Papi Chulo's Mexican Grill & Cantina 3.0
+Toros Cantina & Gaming 3.0
+Agave 3.0
+Arriba Mexican Grill 3.0
+Las Velas 3.0
+Los Olivos 3.0
+Sir Veza's Taco Garage 3.0
+Cabo Wabo Cantina 3.0
+Macayo's Mexican Restaurants 3.0
+El Hefe 3.0
+On The Border Mexican Grill & Cantina 3.0
+Cafe Rio Mexican Grill 3.0
+Paradise Cantina 3.0
+La Parrilla Suiza 3.0
+El Palacio Mexican Restaurant & Cantina 3.0
+The Original Burrito Co 3.5
+Sonrisa Grill 3.5
+Mucho Gusto Taqueria Mexican Bistro 3.5
+Havana Grill 3.5
+Tequila Bar and Grill 3.5
+Diego Mexican Cuisine 3.5
+Secreto 3.5
+Chevys Fresh Mex 3.5
+David's Hamburgers 3.5
+Dona Maria Tamales Restaurant 3.5
+Chipotle Mexican Grill 3.5
+Yo Rita 3.5
+Casa Rasta 3.5
+Distrito 3.5
+Gecko Grill 3.5
+Salsa Blanca 3.5
+Doña Maria Tamales Restaurant 3.5
+Pink Taco 3.5
+Maverick Rock Taco 3.5
+Blanco 3.5
+Canteen Modern Tequila Bar 3.5
+Vida Mexican Kitchen y Cantina 3.5
+Z Tejas Grill 3.5
+El Zocalo Mexican Grill 3.5
+Fuzzy's Taco Shop 3.5
+Popo's Fiesta Del Sol Mexican Food 3.5
+Fausto's Mexican Grill 3 3.5
+Tqla 3.5
+Mixteca Mexican Food 3.5
+Guedo's Cantina Grille 3.5
+Valle Luna 3.5
+Modern Margarita 3.5
+Michoacan Gourmet Mexican Restaurant 3.5
+Los Olivos Norte 3.5
+Yayo Taco 3.5
+Nacho Daddy 3.5
+Mi Casa Grill Cantina 3.5
+Los Favoritos 3.5
+Casa Reynoso 3.5
+Chino Bandido 3.5
+America's Taco Shop 3.5
+Mercadito 3.5
+Valle Luna Mexican Restaurant 3.5
+Gonzalez Y Gonzalez Restaurant 3.5
+Los Dos Molinos 3.5
+Cafe Rio 3.5
+Restaurant Mexico 3.5
+Aunt Chilada's 3.5
+The Old Pueblo Cafe 3.5
+Z'Tejas Southwestern Grill 3.5
+Carlos O'Brien's 3.5
+Loco Patron 3.5
+Verde Mexican Kitchen & Cantina 3.5
+Fajitas A Sizzlin Celebration 3.5
+Coyote's Cafe & Cantina 3.5
+Carlos O'Briens 3.5
+Nacho Daddy Henderson 3.5
+Chayo Mexican Kitchen + Tequila Bar 3.5
+Lulu's Taco Shop 3.5
+El Torito Cafe 3.5
+Canyon Cafe 3.5
+Blue Agave Mexican Cantina 3.5
+Casa Reyna 3.5
+Garcia's Las Avenidas 3.5
+Salt & Lime Modern Mexican Grill 3.5
+Frank & Lupe's Old Mexico 3.5
+Chapala's Mexican Restaurant 3.5
+Urban Taco 3.5
+Fuego CityScape 3.5
+Chuy's 3.5
+Emilianos Mexican Grill & Bar 3.5
+Blanco Tacos And Tequila 3.5
+Jalapeno Inferno 3.5
+Round Corner Cantina 3.5
+Cabo Fish Taco 3.5
+Rio Mirage Cafe 3.5
+Tex Tubb's Taco Palace 3.5
+Roberto's Taco Shop 3.5
+Moreno's Mexican Grill 3.5
+The Loco Lime 3.5
+Los Sombreros 3.5
+Lindo Michoacan 3.5
+Richardson's 3.5
+Barrio Queen 3.5
+La Comida 3.5
+YOLOS 3.5
+Ricardo's Mexican Restaurant 3.5
+Wahoo's Fish Tacos 3.5
+Abuelo's 3.5
+Baja Miguel's 3.5
+Hacienda's Mexican Grill 3.5
+El Encanto 3.5
+Hecho en Vegas 3.5
+Cañonita 3.5
+Fiesta Mexicana 3.5
+Los Favoritos Tacos Shop 3.5
+Mad Mex - Shadyside 3.5
+T&T - Tacos and Tequila 3.5
+Nando's Mexican Cafe 3.5
+Casa Don Juan 3.5
+Two Hippies 3.5
+Mad Mex - Oakland 3.5
+Carlsbad Tavern 3.5
+Revo Burrito 3.5
+Hussong's Cantina 3.5
+Poncho's Mexican Food 3.5
+Serrano's Mexican Grill 4.0
+Las Glorias Grill 4.0
+Frank & Fina's Cocina 4.0
+Original Lindo Michoacan 4.0
+Casa Don Juan Summerlin 4.0
+Roberto's Authentic Mexican Food 4.0
+KoMex Fusion 4.0
+Carolina's Mexican Food 4.0
+Asi Es La Vida 4.0
+Border Grill 4.0
+Gallo Blanco 4.0
+Joyride Taco House 4.0
+Jalisco Cantina 4.0
+Los Tacos 4.0
+La Mestiza 4.0
+Fiesta Burrito 4.0
+Tacos Jalisco 4.0
+Los Taquitos 4.0
+SumoMaya 4.0
+New Mexican Grill 4.0
+Taco Guild 4.0
+Rokerij 4.0
+ISLA Mexican Kitchen & Tequila Bar 4.0
+Isabel's Amor 4.0
+La Tolteca Mexican Foods 4.0
+SoCal Fish Taco Company 4.0
+Milagro Grill 4.0
+Juan Jaime's 4.0
+Richardson's Cuisine of New Mexico 4.0
+Cilantro Tacos 4.0
+Mango's Mexican Cafe 4.0
+El Pollo Supremo 4.0
+El Segundo Sol 4.0
+Los Compadres Mexican Food 4.0
+Pedro's Mexican Restaurant 4.0
+El Bravo 4.0
+The Mission 4.0
+Blanco Tacos + Tequila 4.0
+Taqueria Mi Casita 4.0
+Brushfire Tacos Y Tapas 4.0
+The Stand 4.0
+La Ristra 4.0
+Spotted Donkey Cantina 4.0
+Rosita's Place 4.0
+Popo's Mexican Food 4.0
+Barrio Café 4.0
+Comedor Guadalajara 4.0
+Paz Cantina 4.0
+Viva Mercado's 4.0
+Mi Patio 4.0
+Mundo Restaurant 4.0
+Las Islitas Mariscos 4.0
+Miguel's Restaurants 4.0
+La Piñata 4.0
+Blue Adobe Grille 4.0
+Casa Ramos 4.0
+Leticia's Mexican Cocina 4.0
+La Unica 4.0
+Manuel's Mexican Restaurant 4.0
+The Blind Pig 4.0
+Mucho Macho Taco 4.0
+Paco's Tacos & Tequila 4.0
+Cantina Laredo 4.0
+SOL Mexican Cocina 4.0
+The Burrito Factory 4.0
+Spotted Donkey Cantina, el Pedregal 4.0
+Cien Agaves Tacos & Tequila 4.0
+Escobar's Restaurant 4.0
+Juan's Authentic Mexican Food 4.0
+Diego Pops 4.0
+La Fonda Del Sol 4.0
+Viva Michoacan 4.0
+Burrito Shack 4.0
+Pinches Tacos 4.0
+Via Delosantos 4.0
+Elmer's Tacos 4.0
+Habanero's Mexican Grill 4.0
+La Hacienda 4.0
+Imperial Tacos & Beer 4.0
+Gadzooks Enchiladas & Soup 4.0
+Lenero Mexican Grill 4.0
+Viva Zapatas Mexican Restaurant & Cantina 4.0
+Javier's 4.0
+DJ's Taco Bar 4.0
+Azteca Mexican Restaurant 4.0
+Phat Burrito 4.0
+Taqueria Guadalajara 4.0
+Taco Y Taco 4.0
+Baja Joe's Mexican Cantina and Seafood 4.0
+Chile Addiction 4.0
+Rancho De Tia Rosa 4.0
+Habanero's 4.0
+Juan Jaime's Tacos and Tequila 4.0
+Bonito Michoacan 4.0
+Bakersfield East Blvd 4.0
+Padre's Modern Mexican Cuisine 4.0
+Carlito's Burritos 4.0
+Sí Señor Restaurant 4.0
+Otro Cafe 4.0
+Sabor Latin Street Grill 4.0
+Three Amigos Mexican Restaurant and Cantina 4.0
+Mariscos Playa Hermosa 4.0
+Crescent Ballroom 4.5
+Mama Maria's Mexican Restaurant 4.5
+Don Pancho Mexican Food 4.5
+Tacos Atoyac 4.5
+Mariscos Playa Escondida 4.5
+täkō 4.5
+Dick's Hideaway 4.5
+TaCarbon 4.5
+Chile Verde Express Mexican Grill 4.5
+Julia's Mesquite Mexican and Burgers 4.5
+Mucha Lucha Taco Shop 4.5
+Baja Bar & Grill 4.5
+Paradise Valley Burger Company 4.5
+El Ranchero Restaurant 4.5
+Taquitos Jalisco 4.5
+La Santisima 4.5
+Las Palmas Carniceria 4.5
+Rito's 4.5
+Taqueria Los Yaquis 4.5
+Tortas El Guero 4.5
+Juan's Flaming Fajitas & Cantina 4.5
+Frijoles & Frescas Grilled Tacos 4.5
+Most Wanted Taco Shop 4.5
+Rito's Market & Mexican Take Out 4.5
+Viva Mercado's Mexican Bar and Grill 4.5
+Tacos Sahuaro 4.5
+Fat Boy 4.5
+Maize Mexican Grill 4.5
+Sonora Mesquite Grill 4.5
+Rudy's Burritos 4.5
+Taco Tijuana 4.5
+El Dorado Cantina 4.5
+Green Dacha Grill & Hookah 4.5
+Las Cazuelas 4.5
+Phat Phrank's 4.5
+Los Altos Ranch Market 4.5
+PHX Burrito House 4.5
+Huaraches Moroleon 4.5
+Las Palmas 4.5
+Jaburritos 4.5
+Tacos El Gordo 4.5
+El Sombrero Mexican Bistro 4.5
+Tortilla Fish 4.5
+Braddah's Island Style 4.5
+Backyard Taco 4.5
+Paquime- Street Food of Mexico 4.5
+Los Reyes De La Torta 4.5
+Abuela's Tacos 4.5
