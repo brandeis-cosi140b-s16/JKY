@@ -1,9 +1,9 @@
-Calico Jack's 1.5
+Calico Jack's 1.5 p
 360 Gourmet Burrito 1.5
 Jose Cuervo Tequileria 2.0
 Sammy's Beach Bar & Grill 2.0
-Carlos' n Charlie's 2.0
-Señor Frog's 2.0
+Carlos' n Charlie's 2.0 p
+Señor Frog's 2.0 
 Salty Senorita 2.5
 On the Border Mexican Grill & Cantina 2.5
 Sylvia's La Canasta Mexican Restaurant 2.5
@@ -13,7 +13,7 @@ Coconuts Beach Bar & Mexican Grill 2.5
 Pepe's Tacos 2.5
 San Felipe's Cantina 2.5
 Barrio Cafe 3.0
-Mi Amigo's Mexican Grill 3.0
+Mi Amigo's Mexican Grill 3.0 P
 Dos Gringos 3.0
 Macayo's Mexican Kitchen 3.0
 Macayo's Mexican Restaurant 3.0
@@ -159,7 +159,7 @@ Las Glorias Grill 4.0
 Frank & Fina's Cocina 4.0
 Original Lindo Michoacan 4.0
 Casa Don Juan Summerlin 4.0
-Roberto's Authentic Mexican Food 4.0
+Roberto's Authentic Mexican Food 4.0 P
 KoMex Fusion 4.0
 Carolina's Mexican Food 4.0
 Asi Es La Vida 4.0
@@ -298,7 +298,7 @@ Las Palmas 4.5
 Jaburritos 4.5
 Tacos El Gordo 4.5
 El Sombrero Mexican Bistro 4.5
-Tortilla Fish 4.5
+Tortilla Fish 4.5 P
 Braddah's Island Style 4.5
 Backyard Taco 4.5
 Paquime- Street Food of Mexico 4.5
