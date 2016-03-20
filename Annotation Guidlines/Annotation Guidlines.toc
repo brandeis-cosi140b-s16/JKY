@@ -17,6 +17,7 @@
 \contentsline {paragraph}{}{6}
 \contentsline {subsection}{\numberline {3.2}OPINION}{6}
 \contentsline {paragraph}{}{6}
-\contentsline {subsection}{\numberline {3.3}COREFERENCE}{6}
-\contentsline {paragraph}{}{6}
+\contentsline {subsection}{\numberline {3.3}COREFERENCE}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{}{7}
 \contentsline {paragraph}{}{7}
