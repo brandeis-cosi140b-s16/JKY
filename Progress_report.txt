@@ -9,7 +9,7 @@ Yuan:
 
 Specification of our Yelp Reivew Project: stable, no need to revise
 
-Annotation guildlines: updated 3/20/2016 after the first round of 
+Annotation guildlines: updated on 3/20/2016 after the first round of 
 feedback from the SoccEval team.
 
 
