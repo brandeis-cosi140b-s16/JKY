@@ -2,7 +2,7 @@ Progress on annotating for SoccEval as of 3/25/2016
 
 Justin: Package 1 -- done, Package 2 -- done
 
-Kelley:
+Kelley: Package 1 — done, Package 2 —- done
 
 Yuan:
 
