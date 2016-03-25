@@ -1,0 +1,15 @@
+Progress on annotating for SoccEval as of 3/25/2016
+
+Justin: Package 1 -- done, Package 2 -- done
+
+Kelley:
+
+Yuan:
+
+
+Specification of our Yelp Reivew Project: stable, no need to revise
+
+Annotation guildlines: updated 3/20/2016 after the first round of 
+feedback from the SoccEval team.
+
+
