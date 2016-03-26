@@ -4,7 +4,7 @@ Justin: Package 1 -- done, Package 2 -- done
 
 Kelley: Package 1 — done, Package 2 —- done
 
-Yuan:
+Yuan: Package 1 - done, package 2 - done
 
 
 Specification of our Yelp Reivew Project: stable, no need to revise
