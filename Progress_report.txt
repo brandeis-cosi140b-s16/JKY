@@ -1,4 +1,4 @@
-Progress on annotating for SoccEval as of 4/8/2016
+Progress on annotating for SoccEval as of 4/14/2016
 
 Justin: Package 1 -- done, Package 2 -- done, Package 3 -- done, Package 
 4 -- done, Package 5 -- done
