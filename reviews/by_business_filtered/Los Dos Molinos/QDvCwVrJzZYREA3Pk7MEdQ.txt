@@ -1,6 +1,0 @@
-Food: Delicious
-Chips: Pleasing
-Service: Leaves much to be desired
-Margaritas: Not good
-
-If you like spicy food and you aren't white, this is a good spot.

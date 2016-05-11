@@ -1,2 +1,0 @@
-Service is too slow!!! It seems that the manager it's the only one working. 
-Food and drinks are good.
